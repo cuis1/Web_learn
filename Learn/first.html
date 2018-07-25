@@ -10,6 +10,103 @@
 <!--这是一个注释-->
 
 <body style="background-color: rgb(212, 209, 209)">
+    <dl>
+        <dt>数学</dt>
+        <dd>用来计算推理的学科</dd>
+        <dt>语文</dt>
+        <dd>用来表达的学科，可以表达你想说的话以及想向别人传达的意思</dd>
+    </dl>
+    <!--无序列表-->
+    <ul type="circle">
+        <li>咖啡</li>
+        <li>牛奶</li>
+        <li>面包</li>
+    </ul>
+    <ul>
+        <li>咖啡</li>
+        <li> 茶
+            <ul>
+                <li>拿铁</li>
+                <li>卡布奇诺</li>
+            </ul>
+        </li>
+        <li>面包</li>
+    </ul>
+    <ul type="square">
+        <li>咖啡</li>
+        <li>牛奶</li>
+        <li>面包</li>
+    </ul>
+    <ol type="i">
+        <li>咖啡</li>
+        <li>牛奶</li>
+        <li>面包</li>
+    </ol>
+
+    <ol start="20" type="A">
+        <li>咖啡</li>
+        <li>牛奶</li>
+        <li>面包</li>
+    </ol>
+    <p><b>注释：</b>frame属性无法再Internet Explorer中正确显示。</p>
+    <p>Table with frame = box</p>
+    <table frame="box">
+        <tr>
+            <td>Mouth</td>
+            <td>Saving</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+    <p>Table with frame=above</p>
+    <table frame="above"|>
+        <tr>
+            <td>Mouth</td>
+            <td>Saving</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+    <p>Tabel with below</p>
+    <table frame="below">
+        <tr>
+            <td>Mouth</td>
+            <td>Saving</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+    <p>tabel with frame=hsides</p>
+    <table frame="hsides">
+        <tr>
+            <td>Mouth</td>
+            <td>Saving</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+    <p>tabel with frame=vsides</p>
+    <table frame="vsides">
+        <tr>
+            <td>Mouth</td>
+            <td>Saving</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+
+    </table>
+
+    <br/>
     <table border="1" cellspacing="0" background="imgs/ice.jpg">
         <caption><a id="table2">烂七八糟</a></caption>
         <tr>
@@ -45,16 +142,16 @@
             </td>
         </tr>
     </table>
-    <table border="1" cellpadding="10" cellspacing="0" style="background-color: rgb(36, 156, 192)">
+    <table border="1" width="400"  cellpadding="10" cellspacing="0" style="background-color: rgb(36, 156, 192)">
         <caption>分科成绩表</caption>
         <tr>
             <th rowspan="2">姓名</th>
             <th colspan="3">成绩</th>
         </tr>
         <tr>
-            <td background="imgs/ice.jpg">语文</td>
-            <td style="background-color: chartreuse">数学</td>
-            <td>英语</td>
+            <td background="imgs/ice.jpg" align="left">语文</td>
+            <td style="background-color: chartreuse" align="right">数学</td>
+            <td align="right">英语</td>
         </tr>
         <tr>
             <th>&nbsp;</th>
