@@ -1,6 +1,38 @@
-.city{
-    background-color:rgb(143, 143, 143);
+.city {
+    background-color: rgb(143, 143, 143);
     color: white;
     margin: 20pt;
     padding: 20pt;
+}
+
+#header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+#nav {
+    line-height: 30px;
+    background-color: #eeeeee;
+    height: 300px;
+    width: 100px;
+    float: left;
+    padding: 5px;
+}
+
+#section {
+    background-color: rgb(143, 143, 143);
+    color: white;
+    width: 350px;
+    float: left;
+    padding: 20px;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    clear: both;
+    text-align: center;
+    padding: 5px;
 }
