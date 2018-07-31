@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #customers {
+        font-family: 'Times New Roman', Times, serif;
+        width: 50%;
+        border-collapse: collapse;
+    }
+    
+    table {
+        text-align: center;
+        padding: 5px;
+        border-collapse: collapse;
+        width: 400px;
+        border: 1px solid black;
+    }
+    
+    tabel,
+    th,
+    td {
+        border: 1px solid red;
+    }
+    
+    #customers tr.alt {
+        color: #000000;
+        background-color: aquamarine;
+    }
+    
+    #customers th {
+        font-size: 1.2em;
+        background-color: cyan;
+        height: 25px;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 4px;
+        vertical-align: center;
+    }
+    
+    .biankuang {
+        margin: 10px;
+        padding: 5px 2em 15ex 20%;
+        width: 70;
+        text-align: left;
+        font-size: 1.2em;
+        background-color: lightgreen;
+        text-shadow: #ffffff
+    }
+    
+    a:link,
+    a:visited {
+        border-style: solid;
+        border-width: 5px;
+        border-color: transparent;
+    }
+    
+    a:hover {
+        border-color: gray;
+    }
+    
+    .box_absolute {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    
+    .box_relative {
+        position: relative;
+        left: 10px;
+        float: left
+    }
+</style>
+
+<body>
+    <a href="http://www.baidu.com">百度一下</a>
+    <p class="biankuang">
+        边框测试
+    </p>
+    <table id="customers">
+        <tr>
+            <th>姓名</th>
+            <th>学号</th>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class="alt">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</body>
+<div class="biankuang box_relative">
+    <p class="box_relative">
+        这是一个\相对定位示例
+    </p>
+    <p class="box_absolute">
+        这是一个绝对定位示例
+    </p>
+</div>
+<div>
+
+
+
+</div>
+
+</html>
