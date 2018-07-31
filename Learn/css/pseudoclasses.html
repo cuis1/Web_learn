@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    a:visited {
+        color: red
+    }
+    
+    a:link {
+        color: green
+    }
+    
+    a:hover {
+        color: dodgerblue
+    }
+    
+    a:active {
+        color: cyan;
+        background-color: yellow
+    }
+    
+    a.cur:hover {
+        font-size: 150%;
+    }
+    
+    p>i:first-child {
+        font-weight: bold
+    }
+    
+    p::first-line {
+        color: #ff0000;
+        font-variant: small-caps
+    }
+    
+    p::first-letter {
+        color: purple;
+        font-size: xx-large
+    }
+    
+    p.cure::first-letter {
+        color: chartreuse;
+        font-size: xx-large
+    }
+    
+    h1::before {
+        content: url("eg_cute.gif")
+    }
+    
+    h2::after {
+        content: url("eg_cute.gif")
+    }
+    
+    div {
+        float: right;
+        margin: 5px;
+        padding: 6px;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        width: 120px;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+</body>
+<h1>标题h1</h1>
+<h2>标题2</h2>
+<a href="http://www.baidu.com">百度一下</a>
+<a class="cur" href="http://www.baidu.com">BaiDuYiXia</a>
+<p>
+    wwwwwwwwrrrrrrrdddd<br/>
+    <i>第一个元素</i><br/>
+    <i>第二个元素</i>
+</p>
+<div>
+    <img src="eg_cute.gif" alt="css is fun"><br/>CSS Is Fun</img>
+</div>
+<p class="cure">
+    我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是 我是
+</p>
+
+</html>
