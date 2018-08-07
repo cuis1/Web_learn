@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var imgs = document.getElementsByTagName("img");
+            for (var i = 0; i < imgs.length; i++) {
+                var image = imgs[i];
+                if (image.addEventListener) {
+                    image.addEventListener("click", hide, false);
+
+                } else {
+                    image.attachEvent("onclick", hide);
+                }
+            }
+        }
+
+        function hide(event) {
+            event.target.style.visibility = "hidden";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="backgroundpic.jpg" alt="背景">
+</body>
+
+</html>

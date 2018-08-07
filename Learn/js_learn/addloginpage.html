@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function debug(msg) {
+            var log = document.getElementById("debuglog");
+            if (!log) {
+                log = document.createElement("div");
+                log.id = "debuglog";
+                log.innerHTML = "<h1>Debug Log</h1>";
+                document.body.appendChild(log);
+            }
+            var pre = document.createElement("pre");
+            var text = document.createTextNode(msg);
+            pre.appendChild(text);
+            log.appendChild(pre);
+        }
+
+        function debuger1(msg) {
+            var log = $("#debuglog");
+            if (log.length == 0) {
+                log = $("<div id='debuglog'><h1>Debug Log</h1></div>");
+                log.appendTo(document.body);
+            }
+            log.append($("<pre/>").text(msg));
+        }
+
+        function hide(e, reflow) {
+            if (reflow) {
+                e.style.display = "none";
+            } else {
+                e.style.visibility = "hidden";
+            }
+        }
+
+        function highlight(e) {
+            if (!e.className) {
+                e.className = "hilite";
+            } else {
+                e.className += " hilite";
+            }
+        }
+    </script>
+</head>
+<h1 onclick="debug('111111,')">Debug</h1>
+<div id="debuglog" onclick="hide(this, true)">
+    <h1>Debug log</h1>
+
+</div>
+
+<body>
+
+</body>
+
+</html>
