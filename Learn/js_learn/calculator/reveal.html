@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .reveal * {
+        display: none;
+    }
+    
+    .reveal *.handle {
+        display: block;
+    }
+    
+    .clock {
+        font: blod 24pt sans;
+        background-color: #ddf;
+        padding: 10px;
+        border: solid black 2px;
+        border-radius: 10px;
+    }
+</style>
+<script>
+    function onLoad(f) {
+        if (onLoad.loaded)
+            window.setTimeout(f, 0);
+        else if (window.addEventListener)
+            window.addEventListener("load", f, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", f);
+    }
+    onLoad.loaded = false;
+    onLoad(function() {
+        onLoad.loaded = true;
+    });
+    onLoad(f);
+    onLoad(displayTime);
+
+    function f() {
+
+        var elements = document.getElementsByClassName("revealed");
+        for (var i = 0; i < elements.length; i++) {
+            var elt = elements[i];
+            var title = elt.getElementsByClassName("handle");
+            addRevealHandler(title[0], elt);
+
+        }
+
+        function addRevealHandler(title, elt) {
+            title.onclick = function() {
+                if (elt.className == "reveal")
+                    elt.className = "revealed";
+                else if (elt.className == "revealed")
+                    elt.className = "reveal";
+            }
+        }
+    };
+
+    function displayTime() {
+        var elt = document.getElementsByClassName("clock");
+        var now = new Date();
+        elt[0].innerHTML = now.toLocaleTimeString();
+        setTimeout(displayTime, 1000);
+    }
+</script>
+
+<body>
+    <div class="revealed">
+        <h1 class="handle">Click here to Reveal Hidden Text</h1>
+
+        <p>This paragraph is hidden. It appears when you click on the title.</p>
+    </div>
+    <div class="revealed">
+        <h1 class="handle">Click here to Reveal Hidden Text</h1>
+        <span class="clock">addRevealHandler</span>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #clock {
+        font: blod 24pt sans;
+        background-color: #ddf;
+        padding: 10px;
+        border: solid black 2px;
+        border-radius: 10px;
+    }
+</style>
+<script>
+    function displayTime() {
+        console.log("111111");
+        var elt = document.getElementById("clock");
+        var now = new Date();
+        elt.innerHTML = now.toLocaleTimeString();
+        setTimeout(displayTime, 1000);
+    }
+    window.onload = displayTime;
+</script>
+
+<body>
+    <h1 class="handle">Click here to Reveal Hidden Text</h1>
+    <span id="clock"></span>
+</body>
+
+</html>
