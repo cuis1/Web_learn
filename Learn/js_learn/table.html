@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <table border="1" width="400" cellpadding="10" cellspacing="0" style="background-color: rgb(36, 156, 192)">
         <caption>分科成绩表</caption>
@@ -27,19 +28,19 @@
             <td>4</td>
         </tr>
         <tr>
-          <td>小辣椒</td>
+            <td>小辣椒</td>
             <td>16</td>
             <td>10</td>
             <td>15</td>
         </tr>
         <tr>
-         <td>小美</td>
+            <td>小美</td>
             <td>5</td>
             <td>20</td>
             <td>6</td>
         </tr>
         <tr>
-   <td>霄哥</td>
+            <td>霄哥</td>
             <td>12</td>
             <td>44</td>
             <td>10</td>
@@ -63,18 +64,27 @@
             for (var i = 0; i < rows.length; i++)
                 tbody.appendChild(rows[i]);
         }
-    
+
         function makeSortable(table) {
             var headers = table.getElementsByTagName('th');
             for (var i = 0; i < headers.length; i++) {
-                (function(n) {
+                let n = i;
+                headers[i].onclick = function() {
+                    sortrows(table, n);
+                };
+                /*((n) => {
                     headers[i].onclick = function() {
                         sortrows(table, n);
                     };
-                }(i));
+                })(i);*/
+                /*(function(n) {
+                    headers[i].onclick = function() {
+                        sortrows(table, n);
+                    };
+                }(i));*/
             }
         }
-    
+
         var table = document.getElementsByTagName('table');
         setTimeout(makeSortable(table[0]), 0);
     </script>
