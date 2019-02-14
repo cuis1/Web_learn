@@ -68,6 +68,7 @@ function creatAnswer(elt,n,text){
 
 function callBack(a){
     allQuestions[allQuestions.length-1].choicedAnswer = a;
+    
 }
 
 function next(){
